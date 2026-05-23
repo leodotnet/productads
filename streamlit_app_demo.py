@@ -1,18 +1,16 @@
 """
 Streamlit Demo — 直接调用 API 生图，不依赖数据库/Redis/Celery
-只需要配置 .env 中的 API Key 即可运行：
+需要设置环境变量 GEMINI_API_KEY 和/或 OPENAI_API_KEY：
+    export GEMINI_API_KEY=xxx
     streamlit run streamlit_app_demo.py
 """
 
 import io
 import os
 import base64
-from dotenv import load_dotenv
 
 import streamlit as st
 from PIL import Image
-
-load_dotenv()
 
 st.set_page_config(
     page_title="电商产品图片生成 Demo",
